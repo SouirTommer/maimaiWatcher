@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "MaiMai影片鏡像反轉",
+  "version": "1.0",
+  "description": "《脳天直撃》是黒沢ダイスケ與穴山大輔合作創作的音擊原創曲目。 本曲收錄於音擊原創專輯《ONGEKI Sound Collection 04「No Limit RED Force」》中。",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
