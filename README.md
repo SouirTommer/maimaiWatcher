@@ -1,4 +1,4 @@
-<h1>Video Player Mirror Controls (Maimai chart watcher )</h1>
+<h1>Video Player Mirror Controls (Maimai chart watcher)</h1>
 This is a Chrome extension that adds additional controls to the video player on web pages, allowing you to mirror or rotate the video horizontally, vertically, or by 180 degrees.
 <br>
 <h1>Installation</h1>
@@ -20,14 +20,15 @@ The video player controls consist of four buttons:<br>
 ⟲ (Rotate 180°): Rotates the video by 180 degrees.<br>
 To use the controls, simply hover over the video player area, and the controls will appear. Click the desired button to apply the corresponding transformation to the video.<br>
 <br>
+<br>
+<h1>Images</h1>
+
+![image](https://github.com/SouirTommer/maimaiWatcher/assets/31412017/e560eb80-f7ef-4327-925e-d743ad14aef3)
+![image](https://github.com/SouirTommer/maimaiWatcher/assets/31412017/df94c829-90cc-44a4-903a-9645e6cf7ccb)
+![image](https://github.com/SouirTommer/maimaiWatcher/assets/31412017/442a45ae-46f1-4db9-9230-edbe3c89a5fd)
+  
 <h1>Notes</h1>
 The controls are positioned in the top-right corner of the video player and will automatically hide when the video enters full-screen mode or when the mouse cursor leaves the video player area.<br>
 The extension will only work on web pages that have an HTML5 <video> element.<br>
 The extension does not persist the video transformations across page reloads or navigations.
 
-<h1>Images</h1>
-
-![image](https://github.com/SouirTommer/maimaiWatcher/assets/31412017/df94c829-90cc-44a4-903a-9645e6cf7ccb)
-![image](https://github.com/SouirTommer/maimaiWatcher/assets/31412017/442a45ae-46f1-4db9-9230-edbe3c89a5fd)
-
-<h3>Feel free to use</h3>
