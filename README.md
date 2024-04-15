@@ -4,7 +4,7 @@ This is a Chrome extension that adds additional controls to the video player on 
 <h1>Installation</h1>
 To install the extension, follow these steps:
 <br>
-1. Download or clone this repository to your local machine.<br>
+1. Download the release<br>
 2. Open Google Chrome and navigate to chrome://extensions.<br>
 3. Enable "Developer mode" by toggling the switch in the top-right corner.<br>
 4. Click "Load unpacked" and select the <b>"folder"</b> containing the extension files.<br>
