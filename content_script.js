@@ -27,7 +27,7 @@ function addControls(videoPlayer) {
   controlsContainer.style.zIndex = '9999';
   controlsContainer.style.top = '50px';
   controlsContainer.style.right = '10px';
-  controlsContainer.style.display = 'none';
+  controlsContainer.style.display = 'block';
 
   var toggleButton = createButton('<', function() {
     // Toggle the display of the other buttons
@@ -65,22 +65,15 @@ function addControls(videoPlayer) {
 
   document.addEventListener('fullscreenchange', function() {
     if (document.fullscreenElement) {
-      controlsContainer.style.display = 'none';
-    } else {
-      controlsContainer.style.display = 'block';
+      controlsContainer.style.opacity = '0';
     }
   });
-
   videoContainer.addEventListener('mouseenter', function() {
-    controlsContainer.style.display = 'block';
+    controlsContainer.style.opacity = '1';
   });
 
   videoContainer.addEventListener('mouseleave', function() {
-    controlsContainer.style.display = 'none';
-    var buttons = controlsContainer.querySelectorAll('button:not(:first-child)');
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].style.display = 'none';
-    }
+    controlsContainer.style.opacity = '0';
   });
 }
 
@@ -92,25 +85,17 @@ function removeControls() {
   }
 }
 
-window.addEventListener('load', function() {
-  var videoPlayer = document.querySelector('video');
-  
-  if (videoPlayer && controlsEnabled) {
-    addControls(videoPlayer);
-  }
-});
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.action === 'toggleControls') {
-    
-    controlsEnabled = !controlsEnabled;
-    var videoPlayer = document.querySelector('video');
-    if (controlsEnabled) {
-      addControls(videoPlayer);
-      console.log('Controls enabled');
-    } else {
-      removeControls();
-      console.log('Controls disabled');
-    }
+window.addEventListener('load', async function() {
+  await delay(2000);
+
+  var videoPlayer = document.querySelector('video');
+  console.log('Video player:', videoPlayer);
+  
+  if (videoPlayer) {
+    addControls(videoPlayer);
   }
 });
